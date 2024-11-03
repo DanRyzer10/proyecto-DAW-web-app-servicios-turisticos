@@ -6,7 +6,7 @@
     --color-warning: #F59E0B;
     --color-dark: #111827;
     --color-light: #F9FAFB;
-    --color-gray: #6B7280;
+    --color-gray: #878787;
     --color-gray-light: #D1D5DB;
     --color-gray-dark: #4B5563;
     --color-white: #fff;
@@ -33,10 +33,28 @@
 .btn-button-default {
     background-color: var(--color-primary);
     color: white;
+    font-size: 18px;
+    font-weight: 400;
     border: none;
     border-radius: 10px;
     padding: 5px 10px;
     cursor: pointer;
+}
+.btn-button-outline {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color-primary);
+
+}
+.btn-button-outline:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transition: .5s;
 }
 .btn-button-default:hover {
     background-color: var(--color-secondary);
