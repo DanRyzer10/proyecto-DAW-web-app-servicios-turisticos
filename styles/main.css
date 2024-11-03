@@ -1,0 +1,67 @@
+:root{
+    --color-primary: #3B82F6;
+    --color-secondary: #6366F1;
+    --color-tertiary: #F87171;
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-dark: #111827;
+    --color-light: #F9FAFB;
+    --color-gray: #6B7280;
+    --color-gray-light: #D1D5DB;
+    --color-gray-dark: #4B5563;
+    --color-white: #fff;
+}
+
+.nav-main{
+    background-color: #717171;
+    color: #fff;
+    padding: 10px;
+}
+/*reset css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn-register{
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.btn-register:hover{
+    background-color: var(--color-secondary);
+    transition: .5s;
+    color: white;
+}
+body{
+    font-family: Arial, sans-serif;
+}
+.nav-link-container > a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.nav-options:hover{
+    color: var(--color-primary);
+    transition: .2s;
+    font-weight: 600;
+}
+.logo-text{
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+.logo-text > span {
+    color: var(--color-primary);
+}
+.nav-main-logo-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-button-menu {
+    color: white;
+}
