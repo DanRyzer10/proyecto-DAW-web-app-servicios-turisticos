@@ -95,4 +95,6 @@ body{
 
 .btn-button-menu {
     color: white;
+    border: none;
+    outline: none;
 }

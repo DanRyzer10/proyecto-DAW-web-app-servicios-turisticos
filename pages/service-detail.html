@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +15,6 @@
             height: 100vh;
             padding: 20px;
         }
-        .image-service-container{
-            
-        }
-
         .image-service-container img {
             border-radius: 16px;
             width: 100%;
@@ -86,22 +82,22 @@
             resize: none;
             
         }
-        .input-container button{
-            background-color: var(--color-primary);
-            color: var(--color-light);
-            border: none;
-            border-radius: 10px;
-            padding: 10px;
-            cursor: pointer;
+        .service-title{
+            font-size: 24px;
+            color: var(--color-dark);
+        } 
+        .menu-mobile-icon:hover{
+            scale: 1.1;
+            transition: .3s;
         }
     </style>
 </head>
 <body>
-    <header class=""  >
+    <header>
         <nav class="nav-main d-flex justify-content-between">
-            <a href="index.html" style="text-decoration: none">
+            <a href="/index.html" style="text-decoration: none">
              <div class="nav-main-logo-container ps-2">
-                 <img src="/images/logo.svg" alt="logo de la pagina web">
+                 <img src="/images/logo.svg" alt="logo de TravelPlus  SA">
                  <span class="logo-text d-none d-md-block">
                      Travel<span>PLUS</span>
                  </span>
@@ -118,8 +114,8 @@
                  Iniciar Sesion
              </a>
              </div>
-             <button type="button" class="btn btn-button-menu d-flex d-md-none">
-                 Abrir <menu></menu>
+             <button type="button" class="btn btn-button-menu d-flex align-items-center d-md-none">
+                 <img class="menu-mobile-icon" src="/images/icons/menu-icon.svg" alt="icono de menu movil">
              </button>
          </nav>
     </header>
@@ -127,26 +123,26 @@
         <section class="container">
             <article class="row">
                 <div class="col-2 d-none  d-md-flex gap-2 flex-column align-items-center ">
-                   <img src="/images/service-1.jpeg" class="image-slider-item" >
-                   <img src="/images/service-1.jpeg" class="image-slider-item" >
-                   <img src="/images/service-1.jpeg" class="image-slider-item" >
-                   <img src="/images/service-1.jpeg" class="image-slider-item" >
+                   <img loading="lazy" src="/images/service-1.jpeg" class="image-slider-item" >
+                   <img loading="lazy"  src="/images/service-1.jpeg" class="image-slider-item" >
+                   <img loading="lazy" src="/images/service-1.jpeg" class="image-slider-item" >
+                   <img loading="lazy" src="/images/service-1.jpeg" class="image-slider-item" >
                     
                 </div>
                 <div class="col-12 col-md-4 image-service-container mb-2">
-                    <img src="/images/service-1.jpeg" alt="imagen de servicio">
+                    <img  src="/images/service-1.jpeg" alt="imagen de servicio turistico">
 
                     <article class="d-none d-md-flex my-4 justify-content-between">
                         <small class="share-service-tag">Compartir</small>
                         <div class="d-flex gap-1">
-                            <img src="/images/icons/facebook-media.svg" alt="icono de facebook">
+                            <img src="/images/icons/facebook-media.svg" alt="icono para compartir contenido en facebook">
                             
                         </div>
 
                     </article>
                 </div>
                 <div class="col-12 col-md-6 ">
-                    <h2>Viaje a Italia</h2>
+                    <h1 class="service-title" >Viaje a Italia</h1>
                     <p class="price-service">$789.89</p>
                     <section class="d-flex">
                         <div class="d-flex p-2 gap-2">
@@ -186,7 +182,7 @@
                     </div>
 
                     <section>
-                        <h4>El tour incluye</h4>
+                        <h2 class="service-title"   >El tour incluye</h2>
 
                         <div class="d-flex gap-2  mb-2">
                             <img src="/images/icons/check-icon.svg" width="20" alt="icono de visto verde">
@@ -210,7 +206,7 @@
                    
                 </article>
                 <article class="col col-md-8">
-                        <h3>Comentarios</h3>
+                        <h4 class="service-title"   >Comentarios</h4>
 
                         <article class="user-review mb-2">
                             <strong>Angel Zambrano</strong>
@@ -250,13 +246,10 @@
                         <div class="service-review-input-container">
                             <h5>Puntua este  servicio</h5>
                             <div class="input-container">
-                                <!-- <input class="w-100" type="text"  placeholder="Envianos tus comentarios"> -->
                                 <textarea class="w-100" placeholder="Envianos tus comentarios"></textarea>
-                                <button>Enviar</button>
+                                <button class="btn-button-default" >Enviar</button>
                             </div>
                         </div>
-                </article>
-                <article  class=" d-none d-md-flex col-2 ">
                 </article>
             </section>
             
