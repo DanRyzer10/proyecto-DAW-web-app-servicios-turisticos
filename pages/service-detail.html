@@ -90,6 +90,21 @@
             scale: 1.1;
             transition: .3s;
         }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        .public-review{
+            font-size: 10px;
+            color: var(--color-gray);
+            font-weight: 300;
+        }
     </style>
 </head>
 <body>
@@ -105,52 +120,53 @@
             </a>
  
             <div class="d-none d-md-flex justify-content-center align-items-center gap-3 nav-link-container">
-             <a  class="nav-options" href="index.html" class="nav-main-link">Inicio</a>
-             <a  class="nav-options" href="services.html" class="nav-main-link">Servicios</a>
-             <a class="nav-options"  href="contact.html" class="nav-main-link">Excursiones</a>
-             <a class="nav-options"  href="contact.html" class="nav-main-link">Destinos</a>
-             <a class="nav-options"  href="contact.html" class="nav-main-link">Destinos</a>
-             <a  class="btn-register" href="register.html">
+             <a  class="nav-options nav-main-link" href="index.html" >Inicio</a>
+             <a  class="nav-options nav-main-link" href="services.html" >Servicios</a>
+             <a class="nav-options nav-main-link"  href="contact.html" >Excursiones</a>
+             <a class="nav-options nav-main-link"  href="contact.html" >Destinos</a>
+             <a class="nav-options nav-main-link"  href="contact.html" >Destinos</a>
+             <a  class="btn-register nav-main-link" href="register.html">
                  Iniciar Sesion
              </a>
              </div>
              <button type="button" class="btn btn-button-menu d-flex align-items-center d-md-none">
-                 <img class="menu-mobile-icon" src="/images/icons/menu-icon.svg" alt="icono de menu movil">
+                 <img class="menu-mobile-icon" src="/images/icons/menu-icon.svg" alt="icono de menu mobile" aria-hidden="true" >
              </button>
          </nav>
     </header>
     <main id="main-container">
         <section class="container">
+            <h1 class="visually-hidden">Detalle de servicio turistico</h1>
             <article class="row">
                 <div class="col-2 d-none  d-md-flex gap-2 flex-column align-items-center ">
-                   <img loading="lazy" src="/images/service-1.jpeg" class="image-slider-item" >
-                   <img loading="lazy"  src="/images/service-1.jpeg" class="image-slider-item" >
-                   <img loading="lazy" src="/images/service-1.jpeg" class="image-slider-item" >
-                   <img loading="lazy" src="/images/service-1.jpeg" class="image-slider-item" >
+                   <img loading="lazy" src="/images/service-1.jpeg" class="image-slider-item" alt="imagen de servicio turistico" >
+                   <img loading="lazy"  src="/images/service-1.jpeg" class="image-slider-item" alt="imagen de servicio turistico" >
+                   <img loading="lazy" src="/images/service-1.jpeg" class="image-slider-item" alt="imagen de servicio turistico" >
+                   <img loading="lazy" src="/images/service-1.jpeg" class="image-slider-item" alt="imagen de servicio turistico" >
                     
                 </div>
                 <div class="col-12 col-md-4 image-service-container mb-2">
                     <img  src="/images/service-1.jpeg" alt="imagen de servicio turistico">
 
-                    <article class="d-none d-md-flex my-4 justify-content-between">
+                    <div class="d-none d-md-flex my-4 justify-content-between">
                         <small class="share-service-tag">Compartir</small>
                         <div class="d-flex gap-1">
-                            <img src="/images/icons/facebook-media.svg" alt="icono para compartir contenido en facebook">
+                            <img src="/images/icons/facebook-media.svg" alt="icono para compartir contenido en facebook" aria-hidden="true">
                             
                         </div>
 
-                    </article>
+                    </div>
                 </div>
                 <div class="col-12 col-md-6 ">
-                    <h1 class="service-title" >Viaje a Italia</h1>
+                    <h2 class="service-title" >Viaje a Italia</h2>
                     <p class="price-service">$789.89</p>
-                    <section class="d-flex">
+                    <div class="d-flex">
                         <div class="d-flex p-2 gap-2">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
                         </div>
                         <div style="height: auto;background-color: var(--color-gray);width: 2px;">
 
@@ -158,18 +174,19 @@
                         <span class=" comment-tag ps-2 d-flex align-items-center justify-content-center">
                             5 comentarios
                         </span>
-                    </section>
+                    </div>
                     <article class="service-article-description text-md-left text-center">
+                        <h6>Descripcion del servicio</h6>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam necessitatibus tempore rem fuga consequuntur! Beatae quibusdam voluptate totam, incidunt, iste officia ducimus consequuntur aperiam eveniet quaerat explicabo! Blanditiis, quis quas.
                         </p>
                     </article>
                     <div class="d-flex gap-2 mb-2">
-                        <img src="/images/icons/timer-service.svg" style="width: 20px;" alt="icono de tiempo">
+                        <img src="/images/icons/timer-service.svg" style="width: 20px;" alt="icono de tiempo" aria-hidden="true">
                         <small>Duracion de 3 horas</small>
                     </div>
                     <div class="d-flex gap-2 mb-3">
-                        <img src="/images/icons/ubication-icon.svg" style="width: 14px;" alt="icono de tiempo">
+                        <img src="/images/icons/ubication-icon.svg" style="width: 14px;" alt="icono de tiempo" aria-hidden="true" >
                         <small>Venecia,Italia</small>
                     </div>
                     <div class="d-md-flex d-block justify-content-between gap-2">
@@ -182,18 +199,18 @@
                     </div>
 
                     <section>
-                        <h2 class="service-title"   >El tour incluye</h2>
+                        <h2 class="service-title">El tour incluye</h2>
 
                         <div class="d-flex gap-2  mb-2">
-                            <img src="/images/icons/check-icon.svg" width="20" alt="icono de visto verde">
+                            <img src="/images/icons/check-icon.svg" width="20" alt="icono de visto verde" aria-hidden="true"   >
                             <small>Guía turístico certificado</small>
                         </div>
                         <div class="d-flex gap-2 mb-2">
-                            <img src="/images/icons/check-icon.svg" width="20" alt="icono de visto verde">
+                            <img src="/images/icons/check-icon.svg" width="20" alt="icono de visto verde" aria-hidden="true"  >
                             <small>Guía turístico certificado</small>
                         </div>
                         <div class="d-flex gap-2 mb-2">
-                            <img src="/images/icons/check-icon.svg" width="20" alt="icono de visto verde">
+                            <img src="/images/icons/check-icon.svg" width="20" alt="icono de visto verde" aria-hidden="true"  >
                             <small>Guía turístico certificado</small>
                         </div>
 
@@ -202,44 +219,48 @@
                 </div>
             </article>
             <section class="row">
-                <article  class="d-none d-md-flex col-2 ">
+                <h3 class="visually-hidden" >Seccion de comentarios</h3>
+                <div  class="d-none d-md-flex col-2 ">
                    
-                </article>
+                </div>
                 <article class="col col-md-8">
                         <h4 class="service-title"   >Comentarios</h4>
 
                         <article class="user-review mb-2">
+                            <h5 class="public-review" >Comentado el 24/08/2024</h5>
                             <strong>Angel Zambrano</strong>
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, autem illo quam nemo blanditiis quia vitae? Laudantium, pariatur odio! Expedita fugit voluptate fuga non error, aliquid assumenda placeat illum animi.</p>
                            <div class="d-flex p-2 gap-2 review-rate-container">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
                             </div>
                         </article>
 
                         <article class="user-review mb-2">
+                            <h5 class="public-review" >Comentado el 24/08/2024</h5>
                             <strong>Angel Zambrano</strong>
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, autem illo quam nemo blanditiis quia vitae? Laudantium, pariatur odio! Expedita fugit voluptate fuga non error, aliquid assumenda placeat illum animi.</p>
                            <div class="d-flex p-2 gap-2 review-rate-container">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella"  aria-hidden="true">
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella"  aria-hidden="true">
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella"  aria-hidden="true">
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella"  aria-hidden="true">
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella"  aria-hidden="true">
                             </div>
                         </article>
                         <article class="user-review mb-2">
+                            <h5 class="public-review" >Comentado el 24/08/2024</h5>
                             <strong>Angel Zambrano</strong>
                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, autem illo quam nemo blanditiis quia vitae? Laudantium, pariatur odio! Expedita fugit voluptate fuga non error, aliquid assumenda placeat illum animi.</p>
                            <div class="d-flex p-2 gap-2 review-rate-container">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
-                            <img src="/images/icons/star-rate.svg" alt="icono de estrella">
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
+                            <img src="/images/icons/star-rate.svg" alt="icono de estrella" aria-hidden="true" >
                             </div>
                         </article>
 
