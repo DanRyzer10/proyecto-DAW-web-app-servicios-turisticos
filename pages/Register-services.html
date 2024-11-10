@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ariel Alberto Solís Pino">
+    <title>Registro de Servicios de Turismo</title>
+    <link rel="stylesheet" href="../styles/Styles-register-Services.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Excursiones</a></li>
+                <li><a href="#">Destinos</a></li>
+                <li><a href="#">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h1>Registro de Servicios de Turismo</h1>
+            <p>Ofrece experiencias únicas para viajeros</p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre del servicio:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de actividad:</label>
+                    <input type="text" id="tipo" name="tipo" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción breve:</label>
+                    <input type="text" id="descripcion" name="descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="duracion">Duración/Horarios:</label>
+                    <input type="text" id="duracion" name="duracion" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="capacidad">Capacidad:</label>
+                    <input type="number" id="capacidad" name="capacidad" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Subir imagen:</label>
+                    <input type="file" id="imagen" name="imagen" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="precios">Precios:</label>
+                    <input type="number" id="precio1" name="precio1" placeholder="Desde">
+                    <input type="number" id="precio2" name="precio2" placeholder="Hasta">
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn-register">Registrar</button>
+                    <button type="reset" class="btn-cancel">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
