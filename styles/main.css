@@ -113,8 +113,6 @@ body {
 }
 
 /*FOOTER*/
-
-/* Estilos para el footer */
 footer {
     background-color: #5a5a5a;
     color: #ffffff;
@@ -124,56 +122,39 @@ footer {
     margin-top: 40px;
 }
 
-/* Estilos para los enlaces dentro del footer */
 footer .footer-links ul {
     list-style-type: none;
-    /* Eliminar los puntos de la lista */
     padding: 0;
-    /* Eliminar el padding por defecto */
 }
 
 footer .footer-links ul li {
     display: inline-block;
-    /* Mostrar los elementos de la lista en una sola línea */
     margin-right: 15px;
-    /* Espaciado entre los enlaces */
 }
 
 footer .footer-links ul li a {
     color: #fff;
-    /* Color blanco para los enlaces */
     text-decoration: none;
-    /* Eliminar subrayado de los enlaces */
     font-size: 16px;
-    /* Tamaño de la fuente */
     transition: color 0.3s ease;
-    /* Transición suave para el cambio de color */
 }
 
 footer .footer-links ul li a:hover {
     color: #3498db;
-    /* Color azul para el hover */
 }
 
-/* Estilos para el texto de derechos de autor */
 footer p {
     margin-top: 20px;
-    /* Espaciado superior */
     font-size: 14px;
-    /* Tamaño de la fuente más pequeño */
 }
 
-/* Estilos responsivos para pantallas más pequeñas */
 @media (max-width: 768px) {
     footer {
         padding: 30px 15px;
-        /* Menos espaciado en pantallas pequeñas */
     }
 
     footer .footer-links ul li {
         display: block;
-        /* Los enlaces se apilan verticalmente */
         margin-bottom: 10px;
-        /* Espaciado entre enlaces */
     }
 }
