@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-primary: #3B82F6;
     --color-secondary: #6366F1;
     --color-tertiary: #F87171;
@@ -12,24 +12,27 @@
     --color-white: #fff;
 }
 
-.nav-main{
+.nav-main {
     background-color: #717171;
     color: #fff;
     padding: 10px;
 }
+
 /*reset css*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.btn-register{
+
+.btn-register {
     background-color: var(--color-primary);
     color: white;
     text-decoration: none;
     border-radius: 10px;
     padding: 5px 10px;
 }
+
 .btn-button-default {
     background-color: var(--color-primary);
     color: white;
@@ -40,6 +43,7 @@
     padding: 5px 10px;
     cursor: pointer;
 }
+
 .btn-button-outline {
     background-color: var(--color-light);
     color: var(--color-primary);
@@ -51,43 +55,52 @@
     border: 2px solid var(--color-primary);
 
 }
+
 .btn-button-outline:hover {
     background-color: var(--color-primary);
     color: white;
     transition: .5s;
 }
+
 .btn-button-default:hover {
     background-color: var(--color-secondary);
     transition: .5s;
     color: white;
 }
-.btn-register:hover{
+
+.btn-register:hover {
     background-color: var(--color-secondary);
     transition: .5s;
     color: white;
 }
-body{
+
+body {
     font-family: Arial, sans-serif;
 }
-.nav-link-container > a{
+
+.nav-link-container>a {
     color: white;
     text-decoration: none;
     padding: 10px;
 }
-.nav-options:hover{
+
+.nav-options:hover {
     color: var(--color-primary);
     transition: .2s;
     font-weight: 600;
 }
-.logo-text{
+
+.logo-text {
     font-size: 24px;
     font-weight: 600;
     color: white;
 }
-.logo-text > span {
+
+.logo-text>span {
     color: var(--color-primary);
 }
-.nav-main-logo-container{
+
+.nav-main-logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -97,4 +110,70 @@ body{
     color: white;
     border: none;
     outline: none;
+}
+
+/*FOOTER*/
+
+/* Estilos para el footer */
+footer {
+    background-color: #5a5a5a;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 40px;
+}
+
+/* Estilos para los enlaces dentro del footer */
+footer .footer-links ul {
+    list-style-type: none;
+    /* Eliminar los puntos de la lista */
+    padding: 0;
+    /* Eliminar el padding por defecto */
+}
+
+footer .footer-links ul li {
+    display: inline-block;
+    /* Mostrar los elementos de la lista en una sola línea */
+    margin-right: 15px;
+    /* Espaciado entre los enlaces */
+}
+
+footer .footer-links ul li a {
+    color: #fff;
+    /* Color blanco para los enlaces */
+    text-decoration: none;
+    /* Eliminar subrayado de los enlaces */
+    font-size: 16px;
+    /* Tamaño de la fuente */
+    transition: color 0.3s ease;
+    /* Transición suave para el cambio de color */
+}
+
+footer .footer-links ul li a:hover {
+    color: #3498db;
+    /* Color azul para el hover */
+}
+
+/* Estilos para el texto de derechos de autor */
+footer p {
+    margin-top: 20px;
+    /* Espaciado superior */
+    font-size: 14px;
+    /* Tamaño de la fuente más pequeño */
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 15px;
+        /* Menos espaciado en pantallas pequeñas */
+    }
+
+    footer .footer-links ul li {
+        display: block;
+        /* Los enlaces se apilan verticalmente */
+        margin-bottom: 10px;
+        /* Espaciado entre enlaces */
+    }
 }
