@@ -76,6 +76,22 @@
 
 body {
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+main {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 0;
+}
+footer {
+    /* flex-shrink: 0; */
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
 .nav-link-container>a {
@@ -151,10 +167,17 @@ footer p {
 @media (max-width: 768px) {
     footer {
         padding: 30px 15px;
+       
     }
 
     footer .footer-links ul li {
         display: block;
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding-bottom: 60px; /* Ajusta según la altura de tu footer */
     }
 }
