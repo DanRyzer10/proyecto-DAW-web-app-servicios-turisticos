@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/main.css">
     <meta name="author" content="Veas Noboa Johan David">
     <title>TravelPlus S.A</title>
@@ -175,6 +176,26 @@
                 padding: 1.5rem;
             }
         }
+
+        @media (max-width: 820px) and (min-width: 768px) {
+            .header-info {
+                padding: 2rem;
+                max-width: 100vw;
+                overflow: hidden;
+            }
+
+            .header-info h1 {
+                font-size: 3rem;
+            }
+
+            .header-info p {
+                font-size: 1.4rem;
+                max-width: 90%;
+                margin: 0 auto;
+            }
+
+
+        }
     </style>
 </head>
 
@@ -196,7 +217,7 @@
                 <a class="nav-options nav-main-link" href="#">Excursiones</a>
                 <a class="nav-options nav-main-link" href="#">Destinos</a>
                 <a class="nav-options nav-main-link" href="alojamientos.html">Alojamientos</a>
-                <a class="btn-register nav-main-link" href="#">
+                <a class="btn-register" href="#">
                     Iniciar Sesión
                 </a>
             </div>
@@ -205,12 +226,28 @@
                     aria-hidden="true">
             </button>
         </nav>
+        <div class="sidebar">
+            <button class="sidebar-close">&times;</button>
+            <nav class="sidebar-nav">
+                <div class="m-auto">
+                    <img src="/images/logo.svg" alt="logo de TravelPlus SA">
+
+                </div>
+                <a class="nav-options" href="../index.html">Inicio</a>
+                <a class="nav-options" href="#">Servicios</a>
+                <a class="nav-options" href="#">Excursiones</a>
+                <a class="nav-options" href="#">Destinos</a>
+                <a class="nav-options" href="alojamientos.html">Alojamientos</a>
+                <a class="btn-register" href="#">Iniciar Sesión</a>
+            </nav>
+        </div>
+        <div class="overlay"></div>
     </header>
     <main>
         <header class="header-info">
             <h1>Aventuras Sin Límites</h1>
             <p>Descubre el mundo con nosotros - Experiencias únicas que cambian vidas</p>
-            <a href="#" class="cta-button">Comienza Tu Aventura</a>
+            <a href="../index.html" class="cta-button">Comienza Tu Aventura</a>
         </header>
 
         <section class="about-us">
@@ -273,6 +310,9 @@
         </div>
         <p>&copy; 2024 TravelPlus SA - Todos los derechos reservados.</p>
     </footer>
+
+
+    <script type="text/javascript" src="../js/menu.js"></script>
 </body>
 
 </html>

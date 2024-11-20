@@ -40,7 +40,8 @@
             color: #000;
         }
 
-        .btn-submit, .btn-cancel {
+        .btn-submit,
+        .btn-cancel {
             width: 100%;
             padding: 10px;
             font-size: 1rem;
@@ -73,45 +74,73 @@
 
 <body>
     <header>
-        <nav class="nav-main d-flex justify-content-between align-items-center px-3">
+        <nav class="nav-main d-flex justify-content-between">
             <a href="../index.html" style="text-decoration: none">
-                <div class="nav-main-logo-container">
-                    <img src="../images/logo.svg" alt="logo de TravelPlus SA">
+                <div class="nav-main-logo-container ps-2">
+                    <img src="/images/logo.svg" alt="logo de la pagina web">
                     <span class="logo-text d-none d-md-block">
                         Travel<span>PLUS</span>
                     </span>
                 </div>
             </a>
 
-            <div class="d-flex align-items-center">
-                <img src="../images/icons/Icono-sesion-iniciada.svg" id="icono-sesion" style="margin-right: 15px;" alt="image">
+            <div class="d-none d-md-flex justify-content-center align-items-center gap-3 nav-link-container">
+                <a href="index.html" class="nav-main-link">Inicio</a>
+                <a href="#" class="nav-main-link">Servicios</a>
+                <a href="#" class="nav-main-link">Excursiones</a>
+                <a href="#" class="nav-main-link">Destinos</a>
+                <a href="./alojamientos.html" class="nav-main-link">Alojamiento</a>
+                <a href="register.html" class="btn-register">Iniciar Sesion</a>
             </div>
+            <button type="button" class="btn btn-button-menu d-flex d-md-none">
+                Abrir menú
+            </button>
         </nav>
-    </header>
+        <div class="sidebar">
+            <button class="sidebar-close">&times;</button>
+            <nav class="sidebar-nav">
+                <div class="m-auto">
+                    <img src="/images/logo.svg" alt="logo de TravelPlus SA">
 
+                </div>
+                <a class="nav-options" href="../index.html">Inicio</a>
+                <a class="nav-options" href="#">Servicios</a>
+                <a class="nav-options" href="#">Excursiones</a>
+                <a class="nav-options" href="#">Destinos</a>
+                <a class="nav-options" href="alojamientos.html">Alojamientos</a>
+                <a class="btn-register" href="#">Iniciar Sesión</a>
+            </nav>
+        </div>
+        <div class="overlay"></div>
+    </header>
     <main>
         <section id="registration-section">
             <h1>Registro de Servicios Turísticos</h1>
             <form onsubmit="return validateForm(event)">
                 <div class="form-group">
                     <label for="nombreServicio">Nombre del servicio:</label>
-                    <input type="text" class="form-control" id="nombreServicio" placeholder="Ej. Tour de Aventura" required>
+                    <input type="text" class="form-control" id="nombreServicio" placeholder="Ej. Tour de Aventura"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="tipoActividad">Tipo de actividad:</label>
-                    <input type="text" class="form-control" id="tipoActividad" placeholder="Ej. Excursión, Aventura" required>
+                    <input type="text" class="form-control" id="tipoActividad" placeholder="Ej. Excursión, Aventura"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="descripcion">Descripción breve:</label>
-                    <textarea class="form-control" id="descripcion" rows="3" placeholder="Descripción del servicio" required></textarea>
+                    <textarea class="form-control" id="descripcion" rows="3" placeholder="Descripción del servicio"
+                        required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="direccion">Dirección:</label>
-                    <input type="text" class="form-control" id="direccion" placeholder="Ubicación del servicio" required>
+                    <input type="text" class="form-control" id="direccion" placeholder="Ubicación del servicio"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="duracion">Duración/Horarios:</label>
-                    <input type="text" class="form-control" id="duracion" placeholder="Ej. 3 horas, 9 AM - 12 PM" required>
+                    <input type="text" class="form-control" id="duracion" placeholder="Ej. 3 horas, 9 AM - 12 PM"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="capacidad">Capacidad:</label>
@@ -123,15 +152,18 @@
                 </div>
                 <div class="form-group">
                     <label for="precio">Precio:</label>
-                    <input type="text" class="form-control" id="precio" placeholder="Costo por persona o grupo" required>
+                    <input type="text" class="form-control" id="precio" placeholder="Costo por persona o grupo"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="contactoEmail">Correo electrónico:</label>
-                    <input type="email" class="form-control" id="contactoEmail" placeholder="Correo de contacto" required>
+                    <input type="email" class="form-control" id="contactoEmail" placeholder="Correo de contacto"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="contactoTel">Teléfono:</label>
-                    <input type="tel" class="form-control" id="contactoTel" placeholder="Teléfono de contacto" required pattern="[0-9]{10}">
+                    <input type="tel" class="form-control" id="contactoTel" placeholder="Teléfono de contacto" required
+                        pattern="[0-9]{10}">
                     <small>Debe ser un número de 10 dígitos</small>
                 </div>
                 <div class="d-flex gap-3 mt-4">
@@ -146,7 +178,7 @@
         <section class="footer-links">
             <ul>
                 <li><a href="contact.html">Contacto</a></li>
-                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="./acerca-de.html">Acerca de</a></li>
                 <li><a href="terms.html">Términos y condiciones</a></li>
             </ul>
         </section>
@@ -175,5 +207,8 @@
             return isValid;
         }
     </script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+
 </body>
+
 </html>
