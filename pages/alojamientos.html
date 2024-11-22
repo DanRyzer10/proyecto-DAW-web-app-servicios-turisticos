@@ -142,7 +142,6 @@
                 font-size: 1rem;
             }
         }
-        
     </style>
 </head>
 
@@ -199,7 +198,7 @@
         <div id="accommodation-section" class="accommodation-cards">
             <article>
                 <header>
-                    <img src="https://images.pexels.com/photos/96444/pexels-photo-96444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt="Hotel Grand Luxury">
                 </header>
                 <div class="card-content">
@@ -268,6 +267,34 @@
     </footer>
 
     <script type="text/javascript" src=".././js/menu.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".accommodation-cards article");
+            const bookButtons = document.querySelectorAll(".book-now");
+            bookButtons.forEach(button => {
+                button.addEventListener("click", (event) => {
+                    event.preventDefault(); 
+                    const card = button.closest("article");
+                    const title = card.querySelector(".card-title")?.textContent || "Alojamiento";
+                    alert(`Reservaste: ${title}. ¡Gracias por elegir nuestro servicio!`);
+                });
+            });
+            cards.forEach(card => {
+                const image = card.querySelector("img");
+                if (image) {
+                    card.addEventListener("mouseenter", () => {
+                        image.style.transform = "scale(1.7)";
+                        image.style.transition = "transform 0.8s ease";
+                    });
+
+                    card.addEventListener("mouseleave", () => {
+                        image.style.transform = "scale(1)";
+                    });
+                }
+            });
+        });
+    </script>
+
 
 </body>
 
