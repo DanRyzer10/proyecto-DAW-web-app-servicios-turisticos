@@ -57,6 +57,9 @@
             opacity: 1;
             transition: 0.3s;
         }
+        .image-slider-selected{
+            opacity: 1;
+        }
 
         .user-review {
             padding: 10px;
@@ -76,6 +79,16 @@
             width: 10px;
             height: auto;
         }
+        .review-rate-container-user img >svg path {
+            width: 30px;
+            height: auto;
+            cursor: pointer;
+        }
+        .img-rate-user:hover{
+            scale: 1.1;
+            transition: .3s;
+        }
+
 
         .service-review-input-container {
             padding: 10px;
@@ -123,6 +136,42 @@
             font-weight: 300;
         }
     </style>
+    <script type="module">
+        const images = document.querySelectorAll('.image-slider-item');
+        const mainImage = document.querySelector('.img-main-image');
+
+        images.forEach(img=>{
+            img.addEventListener('click',()=>{
+                mainImage.src = img.src;
+                img.classList.add('image-slider-selected');
+                images.forEach(image=>{
+                    if(image !== img){
+                        image.classList.remove('image-slider-selected');
+                    }
+                })
+            })
+        })
+
+        const starOfRates = document.querySelectorAll('.img-rate-user');
+        starOfRates.forEach(star=>{
+            star.addEventListener('click',(e)=>{
+                console.log(e);
+                star.src = '/images/icons/star-rate.svg';
+                for(let i = 0; i < starOfRates.length; i++){
+            
+                    if(starOfRates[i] === star){
+                        for(i=i+1; i < starOfRates.length; i++){
+                            starOfRates[i].src = '/images/icons/star-rate-gray.svg';
+                        }
+                        break;
+                    }
+                    starOfRates[i].src = '/images/icons/star-rate.svg';
+                }
+
+            })
+        })
+
+    </script>
 </head>
 
 <body>
@@ -138,10 +187,10 @@
             </a>
 
             <div class="d-none d-md-flex justify-content-center align-items-center gap-3 nav-link-container">
-                <a class="nav-options nav-main-link" href="index.html">Inicio</a>
-                <a class="nav-options nav-main-link" href="services.html">Servicios</a>
-                <a class="nav-options nav-main-link" href="contact.html">Excursiones</a>
-                <a class="nav-options nav-main-link" href="contact.html">Destinos</a>
+                <a class="nav-options nav-main-link" href="/pages/home.html">Inicio</a>
+                <a class="nav-options nav-main-link" href="/index.html">Servicios</a>
+                <a class="nav-options nav-main-link" href="/pages/excursiones.html">Excursiones</a>
+                <a class="nav-options nav-main-link" href="/index.html">Destinos</a>
                 <a class="nav-options nav-main-link" href="/pages/alojamientos.html">Alojamientos</a>
                 <a class="btn-register nav-main-link" href="register.html">
                     Iniciar Sesion
@@ -174,18 +223,18 @@
             <h1 class="visually-hidden">Servicio ofrecido por plusServices</h1>
             <article class="row">
                 <div class="col-2 d-none  d-md-flex gap-2 flex-column align-items-center ">
-                    <img loading="lazy" src="../images/service-1.jpeg" class="image-slider-item"
+                    <img class="img-left-side image-slider-item" loading="lazy" src="../images/service-2.jpg" 
                         alt="imagen de servicio turistico">
-                    <img loading="lazy" src="../images/service-1.jpeg" class="image-slider-item"
+                    <img class="img-left-side image-slider-item" loading="lazy" src="../images/service-3.jpg" 
                         alt="imagen de servicio turistico">
-                    <img loading="lazy" src="../images/service-1.jpeg" class="image-slider-item"
+                    <img class="img-left-side image-slider-item" loading="lazy" src="../images/service-1.jpeg" 
                         alt="imagen de servicio turistico">
-                    <img loading="lazy" src="../images/service-1.jpeg" class="image-slider-item"
+                    <img class="img-left-side image-slider-item" loading="lazy" src="../images/service-2.jpg" 
                         alt="imagen de servicio turistico">
 
                 </div>
                 <div class="col-12 col-md-4 image-service-container mb-2">
-                    <img src="../images/service-1.jpeg" alt="imagen de servicio turistico">
+                    <img class="img-main-image" src="../images/service-1.jpeg" alt="imagen de servicio turistico">
 
                     <div class="d-none d-md-flex my-4 justify-content-between">
                         <small class="share-service-tag">Compartir</small>
@@ -321,8 +370,16 @@
                         <h5>Puntua este servicio</h5>
                         <div class="input-container">
                             <textarea class="w-100" placeholder="Envianos tus comentarios"></textarea>
+                            <div class="d-flex p-2 gap-2 review-rate-container-user">
+                                <img class="img-rate-user" src="../images/icons/star-rate-gray.svg" alt="icono de estrella" aria-hidden="true">
+                                <img class="img-rate-user" src="../images/icons/star-rate-gray.svg" alt="icono de estrella" aria-hidden="true">
+                                <img class="img-rate-user" src="../images/icons/star-rate-gray.svg" alt="icono de estrella" aria-hidden="true">
+                                <img class="img-rate-user" src="../images/icons/star-rate-gray.svg" alt="icono de estrella" aria-hidden="true">
+                                <img class="img-rate-user" src="../images/icons/star-rate-gray.svg" alt="icono de estrella" aria-hidden="true">
+                            </div>
                             <button class="btn-button-default">Enviar</button>
                         </div>
+                        
                     </div>
                 </article>
 

@@ -62,6 +62,7 @@ form.addEventListener('submit',(event)=>{
     });
 
     if(!errores){
+        alert('Datos de formulario: \n' + JSON.stringify(Object.fromEntries(new FormData(form))));
         form.submit();
     }
 })
