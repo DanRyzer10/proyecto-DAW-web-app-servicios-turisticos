@@ -270,14 +270,14 @@
         document.addEventListener("DOMContentLoaded", () => {
             const cards = document.querySelectorAll(".accommodation-cards article");
             const bookButtons = document.querySelectorAll(".book-now");
-            bookButtons.forEach(button => {
-                button.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    const card = button.closest("article");
-                    const title = card.querySelector(".card-title")?.textContent || "Alojamiento";
-                    alert(`Reservaste: ${title}. ¡Gracias por elegir nuestro servicio!`);
-                });
-            });
+            // bookButtons.forEach(button => {
+            //     button.addEventListener("click", (event) => {
+            //         event.preventDefault();
+            //         const card = button.closest("article");
+            //         const title = card.querySelector(".card-title")?.textContent || "Alojamiento";
+            //         alert(`Reservaste: ${title}. ¡Gracias por elegir nuestro servicio!`);
+            //     });
+            // });
             cards.forEach(card => {
                 const image = card.querySelector("img");
                 if (image) {
